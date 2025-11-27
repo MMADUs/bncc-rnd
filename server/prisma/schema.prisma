@@ -1,0 +1,29 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// INIT: npx prisma init
+//
+// APPLY SCHEMA CHANGES: npx prisma generate
+// MIGRATE: npx prisma migrate dev
+
+model Feedback {
+  id         Int      @id @default(autoincrement())
+  name       String
+  email      String   @unique
+  eventName  String
+  division   String
+  rating     Int
+  comment    String?
+  suggestion String?
+  createdAt  DateTime @default(now())
+  status     String   @default("open")
+}
