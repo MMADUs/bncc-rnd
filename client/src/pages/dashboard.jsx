@@ -208,9 +208,9 @@ function Dashboard() {
                     className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
                   />
                   <input
-                    name="event_name"
+                    name="eventName"
                     placeholder="Event Name"
-                    value={formik.values.event_name}
+                    value={formik.values.eventName}
                     onChange={formik.handleChange}
                     className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
                   />
